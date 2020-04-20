@@ -1,0 +1,112 @@
+/* Common */
+a:link, a:hover, a:visited, a:active {
+	color: inherit;
+	text-decoration: none;
+}
+/* Haeder */
+.header { 
+	align-items: center;
+}
+.logo {
+	color: white;
+}
+.navi {
+	padding: 1rem 0;
+	width: 150px;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+}
+.sub-wrap {
+	position: absolute;
+	width: 150px; height: 100%;
+	left: 0; top: 100%;
+	display: flex;
+	flex-direction: column;
+	display: none;	
+}
+.sub {
+	cursor: pointer;
+	width: 150px; 
+	padding: 1rem 0;
+	color: white;
+	background-color: rgb(88, 88, 88);
+}
+.sub:hover{
+	color: #222;
+	background-color: #aaa;
+}
+
+
+
+/* top2 */
+.header1 {
+	position: relative;
+}
+.wrapper {
+	align-items: center; 
+}
+
+.navi-wrap2, .sub-wrap2 {
+	color: white;
+	text-align: center;
+}
+
+.navi2 {
+	width: 150px;
+	padding: 1rem;
+}
+
+.sub-wrap2 {					border: 1px solid red;
+	position: absolute;
+	width: 100%;
+	background-color: rgb(88, 88, 88);
+	display: none;
+}
+
+.wrap {					border: 1px solid orange;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.subs2 {					border: 1px solid yellow;
+	text-align: center;
+}
+
+.sub2{					border: 1px solid green;
+	width: 150px;
+	padding: 1rem;
+	display: flex;
+	text-align: center;
+}
+
+.sub2:hover {
+	color: #222;
+	background-color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main */
+
+/* Footer */
+
+/* Responsive */
+@media screen and (max-width: 992px) {}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 575px) {}
+
+

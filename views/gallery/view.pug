@@ -1,0 +1,31 @@
+extends ../layout/default.pug
+block content 
+	.container
+		.alert.alert-secondary
+			h4 
+				i.fa.fa-image.mr-2.text-light
+				span 갤러리 게시판
+					small  - 상세보기
+		.my-3.p-3
+			table.view-tb.table.table-bordered
+				tbody
+					tr
+						td.view-td-tit 번호
+						td= rs.id
+						td.view-td-tit 작성자 
+						td= rs.writer
+						td.view-td-tit 작성일
+						td= rs.wdate
+					tr
+						td.view-td-tit 제목
+						td(colspan="5")= rs.title
+					tr
+						td(colspan="6")
+							p= rs.content
+							img.my-3(src=`${rs.img}`)
+					tr
+						td.view-td-tit 첨부파일
+						td(colspan="5")
+							a(href=`/gallery/download/${rs.savefile}`)= rs.realfile
+			.text-center.my-3
+				button.btn.btn-primary(onclick=`location.href="/gallery/list/${page}"`) 목록

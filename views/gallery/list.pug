@@ -1,0 +1,22 @@
+extends ../layout/default.pug
+block content
+	.container
+		.alert.alert-secondary
+			h4 
+				i.fa.fa-image.mr-2.text-light
+				span 갤러리 게시판
+					small  - 리스트
+		ul.grid
+			li.grid-sizer
+			- for(var v of lists) {
+				li.grid-item
+					div
+						div.item-id= v.id
+						img.img(src=`${v.savefile}`)
+						.hover-bg
+							.icon-wrap
+								a.far.fa-file(href=`/gallery/view/${v.id}`)
+								a.fa.fa-pencil-alt(href=`/gallery/update/${v.id}`)
+								a.fa.fa-trash-alt(onclick=`onDelete(${v.id})`)
+			- }
+		include ../inc/pager.pug
